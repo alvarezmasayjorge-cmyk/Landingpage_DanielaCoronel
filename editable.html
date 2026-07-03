@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     ✏️  GUÍA RÁPIDA — reemplaza solo lo que diga "EDITAR:"
+     Busca la palabra EDITAR en este archivo. Todo lo demás
+     ya está listo.
+
+     1) ✅ WhatsApp configurado: 59176198029
+     2) EDITAR: ID del píxel de Meta → TU_PIXEL_ID   (aparece 2 veces)
+     3) EDITAR: dominio del sitio    → https://tudominio.com
+     4) EDITAR: imagen para compartir → og-image.jpg (1200×630 px)
+     5) EDITAR: datos del consultorio (nombre, dirección, teléfono)
+     6) EDITAR: fotos reales y testimonio (marcados en el cuerpo)
+     ============================================================ -->
+
+<meta name="theme-color" content="#22352A">
+<title>Ortodoncia — Tu nueva sonrisa en 12 meses</title>
+<meta name="description" content="Tratamiento de ortodoncia completo con plan de pago accesible. Evaluación, preparación e instalación con seguimiento mensual.">
+
+<!-- Favicon (diente) sin archivo externo -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🦷%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph / redes sociales (cómo se ve al compartir el link) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tu nueva sonrisa en 12 meses">
+<meta property="og:description" content="Tratamiento de ortodoncia completo con plan de pago que sí puedes cumplir. Agenda tu evaluación por WhatsApp.">
+<!-- EDITAR: dominio real + imagen 1200×630px -->
+<meta property="og:url" content="https://tudominio.com">
+<meta property="og:image" content="https://tudominio.com/og-image.jpg">
+<meta property="og:locale" content="es_BO">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ============================================================
+     PÍXEL DE META — ⚠️ ACTIVO. Solo EDITAR: TU_PIXEL_ID
+     (aparece aquí y también en el <noscript> de abajo).
+     ============================================================ -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'TU_PIXEL_ID');   /* EDITAR: tu ID real del píxel */
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <!-- EDITAR: TU_PIXEL_ID -->
+  <img height="1" width="1" style="display:none" alt=""
+       src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1">
+</noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#22352A;        /* verde pino profundo: color de marca (Dra. Daniela Coronel) */
+  --ink-soft:#5C6E60;   /* verde salvia apagado: textos de apoyo */
+  --aqua:#ECF1E9;       /* verde salvia muy suave: fondos claros */
+  --paper:#FFFFFF;
+  --sage:#6F8A6E;       /* verde salvia de marca: acentos */
+  --ivory:#F4F0E4;      /* marfil del logo: resaltados cálidos */
+  --wa:#1FAF57;         /* verde WhatsApp para CTAs */
+  --wa-dark:#178A44;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Karla',sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.55;
+  font-size:17px;
+  padding-bottom:84px; /* espacio para el botón fijo */
+}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.12}
+img{max-width:100%;display:block}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--aqua);padding:40px 0 44px;text-align:center}
+.eyebrow{
+  display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-soft);
+  background:var(--paper);border-radius:999px;padding:6px 14px;margin-bottom:18px;
+}
+.hero h1{font-size:clamp(30px,7.5vw,44px);font-weight:800;margin-bottom:6px}
+.smile-word{position:relative;display:inline-block;white-space:nowrap}
+.smile-word svg{position:absolute;left:0;bottom:-10px;width:100%;height:14px}
+.hero p.sub{
+  font-size:18px;color:var(--ink-soft);max-width:440px;margin:20px auto 0;
+}
+.hero p.sub strong{color:var(--ink)}
+.hero-photo{
+  margin:26px auto 0;max-width:440px;aspect-ratio:4/3;border-radius:var(--radius);
+  background:linear-gradient(160deg,#D3E0CC,#B9CDB0);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink-soft);font-size:14px;font-weight:700;padding:16px;text-align:center;
+  object-fit:cover;
+}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--wa);color:#fff;text-decoration:none;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;
+  padding:16px 28px;border-radius:999px;margin-top:26px;
+  box-shadow:0 6px 18px rgba(31,175,87,.35);
+  transition:transform .15s ease,background .15s ease;
+}
+.cta:hover{background:var(--wa-dark);transform:translateY(-2px)}
+.cta svg{width:22px;height:22px;flex:none}
+.hero .note{font-size:13px;color:var(--ink-soft);margin-top:12px}
+.trust{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;
+  margin:22px auto 0;max-width:460px;font-size:13px;color:var(--ink-soft);font-weight:700;
+}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust svg{width:16px;height:16px;color:var(--wa)}
+
+/* ---------- PROCESO ---------- */
+.proceso{padding:52px 0}
+.proceso h2{font-size:clamp(24px,5.5vw,32px);font-weight:700;text-align:center;margin-bottom:8px}
+.proceso .lead{text-align:center;color:var(--ink-soft);max-width:460px;margin:0 auto 32px}
+.paso{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--aqua);border-radius:var(--radius);
+  padding:18px 18px 18px 16px;margin-bottom:12px;
+}
+.paso .num{
+  flex:none;width:40px;height:40px;border-radius:50%;
+  background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;
+}
+.paso h3{font-size:17px;font-weight:700;margin-bottom:3px}
+.paso p{font-size:15px;color:var(--ink-soft)}
+.paso.destacado{background:var(--ivory);outline:2px solid var(--sage)}
+
+/* ---------- PRECIO ---------- */
+.precio{background:var(--ink);color:#fff;padding:52px 0;text-align:center}
+.precio h2{font-size:clamp(24px,5.5vw,32px);font-weight:700;margin-bottom:24px}
+.precio-card{
+  background:#fff;color:var(--ink);border-radius:var(--radius);
+  max-width:400px;margin:0 auto;padding:30px 24px;
+}
+.precio-linea{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid #DDE6D6}
+.precio-linea .concepto{font-size:15px;color:var(--ink-soft);text-align:left}
+.precio-linea .monto{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;white-space:nowrap}
+.precio-linea .monto span{font-size:14px;font-weight:500;color:var(--ink-soft)}
+.precio-linea.total{border-bottom:none;border-top:2px solid var(--ink);margin-top:4px;padding-top:14px}
+.precio-linea.total .concepto{color:var(--ink);font-weight:700}
+.precio-card .incluye{font-size:14px;color:var(--ink-soft);margin-top:16px}
+.precio .aviso{font-size:14px;color:#BCCBB4;max-width:420px;margin:20px auto 0}
+
+/* ---------- CASOS ---------- */
+.casos{padding:52px 0}
+.casos h2{font-size:clamp(24px,5.5vw,32px);font-weight:700;text-align:center;margin-bottom:28px}
+.caso-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto}
+.caso{
+  aspect-ratio:1/1;border-radius:var(--radius);
+  background:linear-gradient(160deg,#ECF1E9,#D6E3CE);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:var(--ink-soft);font-size:13px;font-weight:700;padding:12px;object-fit:cover;
+}
+.testimonio{
+  max-width:520px;margin:28px auto 0;background:var(--aqua);
+  border-radius:var(--radius);padding:22px;
+}
+.testimonio p{font-size:16px;font-style:italic}
+.testimonio .autor{font-size:14px;font-weight:700;font-style:normal;margin-top:10px;color:var(--ink-soft)}
+
+/* ---------- CIERRE ---------- */
+.cierre{padding:20px 0 60px;text-align:center}
+.cierre h2{font-size:clamp(22px,5vw,28px);font-weight:700;max-width:420px;margin:0 auto}
+.cierre p{color:var(--ink-soft);margin-top:10px}
+
+/* ---------- BOTÓN FIJO ---------- */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+  border-top:1px solid #DDE6D6;padding:12px 16px;
+  display:flex;justify-content:center;
+}
+.sticky-cta .cta{margin-top:0;width:100%;max-width:420px;justify-content:center;font-size:17px;padding:14px 20px}
+
+footer{background:var(--aqua);padding:24px 0 110px;text-align:center;font-size:13px;color:var(--ink-soft);line-height:1.7}
+footer a{color:var(--ink-soft)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .cta{transition:none}
+}
+a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
+</style>
+
+<!-- ====== EDITOR (solo en esta versión editable; no sale en la versión final) ====== -->
+<style id="editor-style">
+  body.has-editor{padding-top:58px}
+  body.has-editor.editing{padding-top:92px}
+  #editor-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:#22352A;color:#fff;
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 16px;
+    font-family:'Karla',sans-serif;font-size:14px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  #editor-bar .title{font-weight:700;margin-right:auto;display:flex;align-items:center;gap:8px}
+  #editor-bar button{font-family:'Karla',sans-serif;font-size:14px;font-weight:700;cursor:pointer;
+    border:none;border-radius:999px;padding:9px 16px;transition:filter .15s}
+  #editor-bar button:hover{filter:brightness(1.06)}
+  #editor-bar .btn-toggle{background:#F4F0E4;color:#22352A}
+  #editor-bar .btn-download{background:#1FAF57;color:#fff}
+  #editor-bar .btn-reset{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+  #editor-hint{position:fixed;top:58px;left:0;right:0;z-index:99;background:#F4F0E4;color:#22352A;
+    text-align:center;font-size:13px;padding:7px 12px;font-family:'Karla',sans-serif}
+  body:not(.editing) #editor-hint{display:none}
+  body.editing [data-ekey]{outline:2px dashed #6F8A6E;outline-offset:3px;border-radius:4px;cursor:text;transition:background .15s}
+  body.editing [data-ekey]:hover{background:rgba(111,138,110,.14)}
+  body.editing [data-ekey]:focus{outline:2px solid #1FAF57;background:#fff}
+  @media print{#editor-bar,#editor-hint{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ====== BARRA DEL EDITOR (no aparece en la versión final descargada) ====== -->
+<div id="editor-bar" class="editor-ui">
+  <span class="title">✏️ Editor de la página</span>
+  <button type="button" class="btn-toggle" id="btn-toggle">Activar edición</button>
+  <button type="button" class="btn-download" id="btn-download">⬇ Descargar versión final</button>
+  <button type="button" class="btn-reset" id="btn-reset">Deshacer todo</button>
+</div>
+<div id="editor-hint" class="editor-ui">Haz clic sobre cualquier texto resaltado para cambiarlo. Tus cambios se guardan automáticamente.</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Ortodoncia · Plan de 12 meses</span>
+    <h1>La <span class="smile-word">sonrisa<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 4 Q100 24 196 4" fill="none" stroke="#6F8A6E" stroke-width="6" stroke-linecap="round"/></svg></span> que quieres,<br>paso a paso</h1>
+    <p class="sub">Tratamiento de ortodoncia completo con acompañamiento profesional durante <strong>12 meses</strong> y un plan de pago que sí puedes cumplir.</p>
+
+    <!-- EDITAR: reemplaza este bloque por una <img> real, ej:
+         <img class="hero-photo" src="paciente.jpg" alt="Paciente sonriendo con brackets en el consultorio"> -->
+    <div class="hero-photo">FOTO AQUÍ:<br>paciente real de tu consultorio sonriendo con brackets<br>(evita fotos de stock)</div>
+
+    <!-- WhatsApp configurado: 59176198029 (591 = Bolivia · 76198029) -->
+    <a class="cta" id="cta-hero" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n."
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"/></svg>
+      Agendar mi evaluación
+    </a>
+    <p class="note">Respuesta por WhatsApp en horario de atención</p>
+
+    <!-- Señales de confianza. EDITAR el texto según tu caso -->
+    <div class="trust">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Odontóloga colegiada</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>+X años de experiencia</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Materiales garantizados</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESO ================= -->
+<section class="proceso">
+  <div class="wrap">
+    <h2>Así funciona tu tratamiento</h2>
+    <p class="lead">Un proceso serio, sin prisas y sin sorpresas en el camino.</p>
+
+    <div class="paso">
+      <div class="num">1</div>
+      <div><h3>Evaluación inicial</h3>
+      <p>Revisamos tu caso y te decimos exactamente qué necesita tu boca antes de empezar.</p></div>
+    </div>
+
+    <div class="paso destacado">
+      <div class="num">2</div>
+      <div><h3>Preparamos tu boca</h3>
+      <p>Si necesitas limpieza o curaciones, lo resolvemos primero. Los brackets se instalan sobre una boca sana — es lo que garantiza tu resultado.</p></div>
+    </div>
+
+    <div class="paso">
+      <div class="num">3</div>
+      <div><h3>Instalación de brackets</h3>
+      <p>Instalamos tu ortodoncia y empieza la transformación de tu sonrisa.</p></div>
+    </div>
+
+    <div class="paso">
+      <div class="num">4</div>
+      <div><h3>Control cada mes</h3>
+      <p>Durante 12 meses ajustamos tu tratamiento y seguimos tu avance de cerca.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRECIO ================= -->
+<section class="precio">
+  <div class="wrap">
+    <h2>Un plan de pago pensado para ti</h2>
+    <div class="precio-card">
+      <div class="precio-linea">
+        <span class="concepto">Instalación inicial</span>
+        <span class="monto">300 <span>Bs</span></span>
+      </div>
+      <div class="precio-linea">
+        <span class="concepto">Cuota mensual × 12 meses</span>
+        <span class="monto">180 <span>Bs/mes</span></span>
+      </div>
+      <p class="incluye">Incluye controles y ajustes mensuales durante todo tu tratamiento.</p>
+    </div>
+    <p class="aviso">La preparación previa de tu boca (si la necesitas) se cotiza en tu evaluación inicial, según tu caso.</p>
+  </div>
+</section>
+
+<!-- ================= CASOS ================= -->
+<section class="casos">
+  <div class="wrap">
+    <h2>Sonrisas que ya se transformaron</h2>
+    <!-- EDITAR: reemplaza cada .caso por una <img src="caso1-antes.jpg" alt="Antes del tratamiento — caso 1"> -->
+    <div class="caso-grid">
+      <div class="caso">FOTO<br>Antes — Caso 1</div>
+      <div class="caso">FOTO<br>Después — Caso 1</div>
+      <div class="caso">FOTO<br>Antes — Caso 2</div>
+      <div class="caso">FOTO<br>Después — Caso 2</div>
+    </div>
+    <div class="testimonio">
+      <!-- EDITAR: testimonio real de un paciente -->
+      <p>"[Testimonio real de un paciente tuyo: 1 o 2 frases sobre cómo cambió su sonrisa y su confianza.]"</p>
+      <p class="autor">— Nombre del paciente</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CIERRE ================= -->
+<section class="cierre">
+  <div class="wrap">
+    <h2>Tu evaluación es el primer paso</h2>
+    <p>Escríbenos y agenda tu cita. En una sola visita sabrás todo sobre tu tratamiento.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Dra. Daniela Coronel · Estética y Salud Dental</strong><br>
+  Santa Cruz de la Sierra, Bolivia · WhatsApp 76198029<br>
+  <a href="https://maps.google.com/?q=-17.826319,-63.176638" target="_blank" rel="noopener">Ver ubicación en el mapa</a> · <a href="politica-privacidad.html">Política de privacidad</a>
+</footer>
+
+<!-- ================= BOTÓN FIJO ================= -->
+<div class="sticky-cta">
+  <!-- WhatsApp: mismo número que el botón de arriba -->
+  <a class="cta" id="cta-sticky" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n."
+     target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"/></svg>
+    Agendar por WhatsApp
+  </a>
+</div>
+
+<!-- ================= DATOS ESTRUCTURADOS (SEO local) ================= -->
+<!-- EDITAR solo el dominio (url) cuando lo tengas -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Dra. Daniela Coronel — Estética y Salud Dental",
+  "description": "Tratamiento de ortodoncia completo con plan de pago de 12 meses.",
+  "url": "https://tudominio.com",
+  "telephone": "+59176198029",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Santa Cruz de la Sierra",
+    "addressRegion": "Santa Cruz",
+    "addressCountry": "BO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -17.826319,
+    "longitude": -63.176638
+  },
+  "hasMap": "https://maps.google.com/?q=-17.826319,-63.176638"
+}
+</script>
+
+<script>
+// Evento de conversión: se dispara cuando alguien toca cualquier botón de WhatsApp.
+// El evento "Contact" te permite optimizar la campaña hacia personas que llegan
+// hasta el botón (no solo clics en el anuncio).
+document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    if (typeof fbq === 'function') { fbq('track', 'Contact'); }
+  });
+});
+</script>
+
+<!-- ====== SCRIPT DEL EDITOR (no aparece en la versión final descargada) ====== -->
+<script id="editor-script">
+(function(){
+  var SEL = "h1, .eyebrow, .hero p.sub, .hero .note, .trust span, .proceso h2, .proceso .lead, .paso h3, .paso p, .precio h2, .concepto, .monto, .incluye, .aviso, .casos h2, .testimonio p, .autor, .cierre h2, .cierre p";
+  var KEY = "dc_landing_edits_v1";
+  var nodes = Array.prototype.slice.call(document.querySelectorAll(SEL));
+  nodes.forEach(function(el,i){ el.setAttribute("data-ekey", i); });
+
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e){}
+  nodes.forEach(function(el,i){ if(saved[i] != null){ el.innerHTML = saved[i]; } });
+
+  function save(){
+    var data = {};
+    nodes.forEach(function(el,i){ data[i] = el.innerHTML; });
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch(e){}
+  }
+
+  document.body.classList.add("has-editor");
+  var editing = false;
+  var btnToggle = document.getElementById("btn-toggle");
+  function setEditing(on){
+    editing = on;
+    document.body.classList.toggle("editing", on);
+    nodes.forEach(function(el){ el.contentEditable = on ? "true" : "false"; });
+    btnToggle.textContent = on ? "Ver cómo quedará" : "Activar edición";
+  }
+  btnToggle.addEventListener("click", function(){ setEditing(!editing); });
+
+  document.addEventListener("input", function(e){
+    if(e.target && e.target.hasAttribute && e.target.hasAttribute("data-ekey")) save();
+  });
+
+  document.getElementById("btn-reset").addEventListener("click", function(){
+    if(confirm("¿Borrar todos los cambios y volver al texto original?")){
+      localStorage.removeItem(KEY); location.reload();
+    }
+  });
+
+  document.getElementById("btn-download").addEventListener("click", function(){
+    setEditing(false);
+    var clone = document.documentElement.cloneNode(true);
+    clone.querySelectorAll(".editor-ui, #editor-style, #editor-script").forEach(function(n){ n.remove(); });
+    clone.querySelectorAll("[data-ekey]").forEach(function(n){ n.removeAttribute("data-ekey"); n.removeAttribute("contenteditable"); });
+    var b = clone.querySelector("body");
+    if(b){ b.classList.remove("has-editor","editing"); if(!b.className) b.removeAttribute("class"); }
+    var html = "<!DOCTYPE html>\n" + clone.outerHTML;
+    var blob = new Blob([html], {type:"text/html"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "landing-final.html";
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ a.remove(); URL.revokeObjectURL(a.href); }, 100);
+  });
+})();
+</script>
+
+</body>
+</html>
