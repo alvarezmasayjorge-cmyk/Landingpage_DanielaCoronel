@@ -16,7 +16,7 @@ Landing page de ortodoncia (plan de 12 meses) con conversión por WhatsApp, pens
 ## Pendiente antes de la campaña
 
 - Reemplazar `TU_PIXEL_ID` por el ID real del píxel de Meta (aparece 2 veces en `index.html`).
-- Actualizar el dominio (`https://tudominio.com`) y la imagen para compartir (`og-image.jpg`, 1200×630) en las etiquetas Open Graph.
+- Añadir la imagen para compartir (`og-image.jpg`, 1200×630) en la raíz del repo, para el Open Graph. (El dominio ya apunta a GitHub Pages.)
 - Añadir fotos reales (paciente del hero y casos antes/después) y el testimonio.
 
 ## Datos ya configurados
