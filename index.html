@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -38,7 +37,7 @@
      PÍXEL DE META — ⚠️ ACTIVO. Solo EDITAR: TU_PIXEL_ID
      (aparece aquí y también en el <noscript> de abajo).
      ============================================================ -->
-<script>
+<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -54,8 +53,8 @@ fbq('track', 'PageView');
 </noscript>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=Karla:wght@400;500;700&amp;display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -196,33 +195,59 @@ footer a{color:var(--ink-soft)}
 }
 a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 </style>
-</head>
+
+<!-- ====== EDITOR (solo en esta versión editable; no sale en la versión final) ====== -->
+
+<style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
+</style></head>
 <body>
+
+<!-- ====== BARRA DEL EDITOR (no aparece en la versión final descargada) ====== -->
+
+
 
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">Ortodoncia · Plan de 12 meses</span>
-    <h1>La <span class="smile-word">sonrisa<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 4 Q100 24 196 4" fill="none" stroke="#6F8A6E" stroke-width="6" stroke-linecap="round"/></svg></span> que quieres,<br>paso a paso</h1>
-    <p class="sub">Tratamiento de ortodoncia completo con acompañamiento profesional durante <strong>12 meses</strong> y un plan de pago que sí puedes cumplir.</p>
+    <span class="eyebrow">promo por tiempo limitado - cupos reducidos</span>
+    <h1>La <span class="smile-word">sonrisa<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 4 Q100 24 196 4" fill="none" stroke="#6F8A6E" stroke-width="6" stroke-linecap="round"></path></svg></span> que quieres,<br>paso a paso</h1>
+    <p class="sub"><div>Tratamiento de ortodoncia personalizado con seguimiento profesional en cada etapa para lograr una sonrisa funcional, saludable y armónica.</div></p>
 
     <!-- EDITAR: reemplaza este bloque por una <img> real, ej:
          <img class="hero-photo" src="paciente.jpg" alt="Paciente sonriendo con brackets en el consultorio"> -->
     <div class="hero-photo">FOTO AQUÍ:<br>paciente real de tu consultorio sonriendo con brackets<br>(evita fotos de stock)</div>
 
     <!-- WhatsApp configurado: 59176198029 (591 = Bolivia · 76198029) -->
-    <a class="cta" id="cta-hero" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n."
-       target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"/></svg>
+    <a class="cta" id="cta-hero" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"></path></svg>
       Agendar mi evaluación
     </a>
     <p class="note">Respuesta por WhatsApp en horario de atención</p>
 
     <!-- Señales de confianza. EDITAR el texto según tu caso -->
     <div class="trust">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Odontóloga colegiada</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>+X años de experiencia</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Materiales garantizados</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Especialista certificada</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>✓ Tecnología moderna</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>✓ Atención personalizada</span>
     </div>
   </div>
 </section>
@@ -230,31 +255,31 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 <!-- ================= PROCESO ================= -->
 <section class="proceso">
   <div class="wrap">
-    <h2>Así funciona tu tratamiento</h2>
-    <p class="lead">Un proceso serio, sin prisas y sin sorpresas en el camino.</p>
+    <h2>¿QUÉ INCLUYE TU TRATAMIENTO?</h2>
+    <p class="lead"><br></p>
 
     <div class="paso">
       <div class="num">1</div>
-      <div><h3>Evaluación inicial</h3>
-      <p>Revisamos tu caso y te decimos exactamente qué necesita tu boca antes de empezar.</p></div>
+      <div><h3>Diagnóstico completo&nbsp;</h3>
+      <p><br></p></div>
     </div>
 
     <div class="paso destacado">
       <div class="num">2</div>
-      <div><h3>Preparamos tu boca</h3>
-      <p>Si necesitas limpieza o curaciones, lo resolvemos primero. Los brackets se instalan sobre una boca sana — es lo que garantiza tu resultado.</p></div>
+      <div><h3>Plan de tratamiento personalizado</h3>
+      <p><br></p></div>
     </div>
 
     <div class="paso">
       <div class="num">3</div>
-      <div><h3>Instalación de brackets</h3>
-      <p>Instalamos tu ortodoncia y empieza la transformación de tu sonrisa.</p></div>
+      <div><h3>controles periódicos</h3>
+      <p><br></p></div>
     </div>
 
     <div class="paso">
       <div class="num">4</div>
-      <div><h3>Control cada mes</h3>
-      <p>Durante 12 meses ajustamos tu tratamiento y seguimos tu avance de cerca.</p></div>
+      <div><h3>acompañamiento durante todo el proceso</h3>
+      <p><br></p></div>
     </div>
   </div>
 </section>
@@ -265,14 +290,14 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
     <h2>Un plan de pago pensado para ti</h2>
     <div class="precio-card">
       <div class="precio-linea">
-        <span class="concepto">Instalación inicial</span>
+        <span class="concepto">cuota inicial</span>
         <span class="monto">300 <span>Bs</span></span>
       </div>
       <div class="precio-linea">
-        <span class="concepto">Cuota mensual × 12 meses</span>
-        <span class="monto">180 <span>Bs/mes</span></span>
+        <span class="concepto">cómodas cuotas mensuales&nbsp;</span>
+        <span class="monto"><br></span>
       </div>
-      <p class="incluye">Incluye controles y ajustes mensuales durante todo tu tratamiento.</p>
+      <p class="incluye"><span style="font-size: 15px; text-align: left;">Tratamiento completo de 12 y 24 meses</span></p>
     </div>
     <p class="aviso">La preparación previa de tu boca (si la necesitas) se cotiza en tu evaluación inicial, según tu caso.</p>
   </div>
@@ -314,9 +339,8 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 <!-- ================= BOTÓN FIJO ================= -->
 <div class="sticky-cta">
   <!-- WhatsApp: mismo número que el botón de arriba -->
-  <a class="cta" id="cta-sticky" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n."
-     target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"/></svg>
+  <a class="cta" id="cta-sticky" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"></path></svg>
     Agendar por WhatsApp
   </a>
 </div>
@@ -358,5 +382,9 @@ document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
 });
 </script>
 
-</body>
-</html>
+<!-- ====== SCRIPT DEL EDITOR (no aparece en la versión final descargada) ====== -->
+
+
+
+
+</body></html>
