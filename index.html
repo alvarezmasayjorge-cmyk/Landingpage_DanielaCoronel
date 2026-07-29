@@ -97,11 +97,9 @@ img{max-width:100%;display:block}
 }
 .hero p.sub strong{color:var(--ink)}
 .hero-photo{
-  margin:26px auto 0;max-width:440px;aspect-ratio:4/3;border-radius:var(--radius);
-  background:linear-gradient(160deg,#D3E0CC,#B9CDB0);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--ink-soft);font-size:14px;font-weight:700;padding:16px;text-align:center;
+  margin:26px auto 0;max-width:440px;width:100%;border-radius:var(--radius);
   object-fit:cover;
+  box-shadow:0 8px 30px rgba(34,53,42,.15);
 }
 .cta{
   display:inline-flex;align-items:center;gap:10px;
@@ -160,10 +158,24 @@ img{max-width:100%;display:block}
 .casos h2{font-size:clamp(24px,5.5vw,32px);font-weight:700;text-align:center;margin-bottom:28px}
 .caso-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto}
 .caso{
-  aspect-ratio:1/1;border-radius:var(--radius);
+  position:relative;aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;
   background:linear-gradient(160deg,#ECF1E9,#D6E3CE);
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  color:var(--ink-soft);font-size:13px;font-weight:700;padding:12px;object-fit:cover;
+}
+.caso img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.caso .badge{
+  position:absolute;top:10px;left:10px;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:.04em;text-transform:uppercase;
+  padding:5px 12px;border-radius:999px;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.caso .badge-antes{
+  background:rgba(34,53,42,.75);color:#fff;
+}
+.caso .badge-despues{
+  background:rgba(31,175,87,.85);color:#fff;
 }
 .testimonio{
   max-width:520px;margin:28px auto 0;background:var(--aqua);
@@ -188,6 +200,36 @@ img{max-width:100%;display:block}
 
 footer{background:var(--aqua);padding:24px 0 110px;text-align:center;font-size:13px;color:var(--ink-soft);line-height:1.7}
 footer a{color:var(--ink-soft)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:480px){
+  .hero{padding:28px 0 36px}
+  .hero h1{font-size:28px}
+  .eyebrow{font-size:11px;padding:5px 12px}
+  .cta{font-size:16px;padding:14px 22px}
+  .hero-photo{max-width:100%}
+  .caso-grid{gap:8px}
+  .caso .badge{font-size:10px;padding:4px 9px;top:6px;left:6px}
+  .precio-linea .monto{font-size:22px}
+  .testimonio{padding:16px}
+  .testimonio p{font-size:15px}
+  .paso{padding:14px;gap:12px}
+  .paso .num{width:36px;height:36px;font-size:15px}
+  .paso h3{font-size:16px}
+}
+
+@media (max-width:340px){
+  .wrap{padding:0 14px}
+  .caso-grid{grid-template-columns:1fr;max-width:280px}
+  .hero h1{font-size:24px}
+  .cta{font-size:15px;padding:12px 18px;gap:8px}
+}
+
+/* Touch-friendly: min tap target size */
+@media (pointer:coarse){
+  .cta{min-height:48px}
+  .trust span{min-height:44px}
+}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -232,9 +274,8 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
     <h1>La <span class="smile-word">sonrisa<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 4 Q100 24 196 4" fill="none" stroke="#6F8A6E" stroke-width="6" stroke-linecap="round"></path></svg></span> que quieres,<br>paso a paso</h1>
     <p class="sub"><div>Tratamiento de ortodoncia personalizado con seguimiento profesional en cada etapa para lograr una sonrisa funcional, saludable y armónica.</div></p>
 
-    <!-- EDITAR: reemplaza este bloque por una <img> real, ej:
-         <img class="hero-photo" src="paciente.jpg" alt="Paciente sonriendo con brackets en el consultorio"> -->
-    <div class="hero-photo">FOTO AQUÍ:<br>paciente real de tu consultorio sonriendo con brackets<br>(evita fotos de stock)</div>
+    <!-- Foto principal de la Dra. Daniela Coronel -->
+    <img class="hero-photo" src="Ortodoncia Daniel /Doctora.webp" alt="Dra. Daniela Coronel — Especialista en Ortodoncia">
 
     <!-- WhatsApp configurado: 59176198029 (591 = Bolivia · 76198029) -->
     <a class="cta" id="cta-hero" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n." target="_blank" rel="noopener">
@@ -307,17 +348,43 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 <section class="casos">
   <div class="wrap">
     <h2>Sonrisas que ya se transformaron</h2>
-    <!-- EDITAR: reemplaza cada .caso por una <img src="caso1-antes.jpg" alt="Antes del tratamiento — caso 1"> -->
     <div class="caso-grid">
-      <div class="caso">FOTO<br>Antes — Caso 1</div>
-      <div class="caso">FOTO<br>Después — Caso 1</div>
-      <div class="caso">FOTO<br>Antes — Caso 2</div>
-      <div class="caso">FOTO<br>Después — Caso 2</div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 01.svg" alt="Antes del tratamiento — caso 1">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 01.svg" alt="Después del tratamiento — caso 1">
+        <span class="badge badge-despues">Después</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 02.svg" alt="Antes del tratamiento — caso 2">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 02.svg" alt="Después del tratamiento — caso 2">
+        <span class="badge badge-despues">Después</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 03.svg" alt="Antes del tratamiento — caso 3">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 03.svg" alt="Después del tratamiento — caso 3">
+        <span class="badge badge-despues">Después</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 04.svg" alt="Antes del tratamiento — caso 4">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 04.svg" alt="Después del tratamiento — caso 4">
+        <span class="badge badge-despues">Después</span>
+      </div>
     </div>
     <div class="testimonio">
-      <!-- EDITAR: testimonio real de un paciente -->
-      <p>"[Testimonio real de un paciente tuyo: 1 o 2 frases sobre cómo cambió su sonrisa y su confianza.]"</p>
-      <p class="autor">— Nombre del paciente</p>
+      <p>"Siempre me tapaba la boca para reír porque me daba vergüenza que vean mis dientes chuecos. Desde que empecé mi tratamiento con la Dra. Daniela me siento otra persona, ahora sonrío sin pensarlo dos veces."</p>
+      <p class="autor">— María G.</p>
     </div>
   </div>
 </section>
