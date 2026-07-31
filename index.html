@@ -9,7 +9,7 @@
      ya está listo.
 
      1) ✅ WhatsApp configurado: 59176198029
-     2) EDITAR: ID del píxel de Meta → TU_PIXEL_ID   (aparece 2 veces)
+     2) ✅ Píxel de Meta configurado: 1100295705655365
      3) ✅ Dominio configurado (GitHub Pages)
      4) EDITAR: imagen para compartir → og-image.jpg (1200×630 px)
      5) EDITAR: datos del consultorio (nombre, dirección, teléfono)
@@ -34,8 +34,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- ============================================================
-     PÍXEL DE META — ⚠️ ACTIVO. Solo EDITAR: TU_PIXEL_ID
-     (aparece aquí y también en el <noscript> de abajo).
+     PÍXEL DE META — ✅ CONFIGURADO (ID: 1100295705655365)
      ============================================================ -->
 <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -43,13 +42,12 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'TU_PIXEL_ID');   /* EDITAR: tu ID real del píxel */
+fbq('init', '1100295705655365');
 fbq('track', 'PageView');
 </script>
 <noscript>
-  <!-- EDITAR: TU_PIXEL_ID -->
   <img height="1" width="1" style="display:none" alt=""
-       src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1">
+       src="https://www.facebook.com/tr?id=1100295705655365&ev=PageView&noscript=1">
 </noscript>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -435,14 +433,57 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 </script>
 
 <script>
-// Evento de conversión: se dispara cuando alguien toca cualquier botón de WhatsApp.
-// El evento "Contact" te permite optimizar la campaña hacia personas que llegan
-// hasta el botón (no solo clics en el anuncio).
-document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    if (typeof fbq === 'function') { fbq('track', 'Contact'); }
+// ===================== EVENTOS META PIXEL =====================
+// Estos eventos permiten a Meta optimizar tus campañas hacia
+// personas con mayor intención de conversión.
+
+(function(){
+  if (typeof fbq !== 'function') return;
+
+  // 1) CONTACT — clic en cualquier botón de WhatsApp (hero o sticky)
+  document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      fbq('track', 'Contact');
+    });
   });
-});
+
+  // 2) VIEWCONTENT — el usuario ve la sección de precios (señal de interés)
+  var precioObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        fbq('track', 'ViewContent', {
+          content_name: 'Precios Ortodoncia',
+          content_category: 'Pricing'
+        });
+        precioObs.disconnect(); // solo disparar una vez
+      }
+    });
+  }, { threshold: 0.5 });
+  var precioSection = document.querySelector('.precio');
+  if (precioSection) precioObs.observe(precioSection);
+
+  // 3) LEAD — el usuario scrollea más del 75% de la página (alta intención)
+  var leadFired = false;
+  window.addEventListener('scroll', function(){
+    if (leadFired) return;
+    var scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+    if (scrollPct > 0.75) {
+      fbq('track', 'Lead', {
+        content_name: 'Scroll 75%'
+      });
+      leadFired = true;
+    }
+  }, { passive: true });
+
+  // 4) SCHEDULE — clic en el botón sticky (intención fuerte de agendar)
+  var stickyBtn = document.getElementById('cta-sticky');
+  if (stickyBtn) {
+    stickyBtn.addEventListener('click', function(){
+      fbq('track', 'Schedule');
+    });
+  }
+
+})();
 </script>
 
 <!-- ====== SCRIPT DEL EDITOR (no aparece en la versión final descargada) ====== -->
