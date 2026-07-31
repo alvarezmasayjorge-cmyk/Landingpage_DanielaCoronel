@@ -36,7 +36,7 @@
 <!-- ============================================================
      PÍXEL DE META — ✅ CONFIGURADO (ID: 1100295705655365)
      ============================================================ -->
-<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
+<script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -437,53 +437,61 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 // Estos eventos permiten a Meta optimizar tus campañas hacia
 // personas con mayor intención de conversión.
 
-(function(){
-  if (typeof fbq !== 'function') return;
-
-  // 1) CONTACT — clic en cualquier botón de WhatsApp (hero o sticky)
-  document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      fbq('track', 'Contact');
-    });
-  });
-
-  // 2) VIEWCONTENT — el usuario ve la sección de precios (señal de interés)
-  var precioObs = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (entry.isIntersecting) {
-        fbq('track', 'ViewContent', {
-          content_name: 'Precios Ortodoncia',
-          content_category: 'Pricing'
-        });
-        precioObs.disconnect(); // solo disparar una vez
-      }
-    });
-  }, { threshold: 0.5 });
-  var precioSection = document.querySelector('.precio');
-  if (precioSection) precioObs.observe(precioSection);
-
-  // 3) LEAD — el usuario scrollea más del 75% de la página (alta intención)
-  var leadFired = false;
-  window.addEventListener('scroll', function(){
-    if (leadFired) return;
-    var scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
-    if (scrollPct > 0.75) {
-      fbq('track', 'Lead', {
-        content_name: 'Scroll 75%'
-      });
-      leadFired = true;
-    }
-  }, { passive: true });
-
-  // 4) SCHEDULE — clic en el botón sticky (intención fuerte de agendar)
-  var stickyBtn = document.getElementById('cta-sticky');
-  if (stickyBtn) {
-    stickyBtn.addEventListener('click', function(){
-      fbq('track', 'Schedule');
-    });
+document.addEventListener('DOMContentLoaded', function(){
+  // Esperar a que fbq esté disponible (el script se carga async)
+  function waitForFbq(callback, attempts) {
+    if (typeof fbq === 'function') { callback(); return; }
+    if (attempts > 20) return; // máximo ~10 segundos
+    setTimeout(function(){ waitForFbq(callback, attempts + 1); }, 500);
   }
 
-})();
+  waitForFbq(function(){
+
+    // 1) CONTACT — clic en cualquier botón de WhatsApp (hero o sticky)
+    document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        fbq('track', 'Contact');
+      });
+    });
+
+    // 2) VIEWCONTENT — el usuario ve la sección de precios (señal de interés)
+    var precioObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          fbq('track', 'ViewContent', {
+            content_name: 'Precios Ortodoncia',
+            content_category: 'Pricing'
+          });
+          precioObs.disconnect(); // solo disparar una vez
+        }
+      });
+    }, { threshold: 0.5 });
+    var precioSection = document.querySelector('.precio');
+    if (precioSection) precioObs.observe(precioSection);
+
+    // 3) LEAD — el usuario scrollea más del 75% de la página (alta intención)
+    var leadFired = false;
+    window.addEventListener('scroll', function(){
+      if (leadFired) return;
+      var scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+      if (scrollPct > 0.75) {
+        fbq('track', 'Lead', {
+          content_name: 'Scroll 75%'
+        });
+        leadFired = true;
+      }
+    }, { passive: true });
+
+    // 4) SCHEDULE — clic en el botón sticky (intención fuerte de agendar)
+    var stickyBtn = document.getElementById('cta-sticky');
+    if (stickyBtn) {
+      stickyBtn.addEventListener('click', function(){
+        fbq('track', 'Schedule');
+      });
+    }
+
+  }, 0);
+});
 </script>
 
 <!-- ====== SCRIPT DEL EDITOR (no aparece en la versión final descargada) ====== -->
