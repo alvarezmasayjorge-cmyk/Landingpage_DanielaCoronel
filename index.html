@@ -432,59 +432,7 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 }
 </script>
 
-<script>
-// ===================== EVENTOS META PIXEL =====================
-// Estos eventos permiten a Meta optimizar tus campañas hacia
-// personas con mayor intención de conversión.
 
-(function(){
-  if (typeof fbq !== 'function') return;
-
-  // 1) CONTACT — clic en cualquier botón de WhatsApp (hero o sticky)
-  document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      fbq('track', 'Contact');
-    });
-  });
-
-  // 2) VIEWCONTENT — el usuario ve la sección de precios (señal de interés)
-  var precioObs = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (entry.isIntersecting) {
-        fbq('track', 'ViewContent', {
-          content_name: 'Precios Ortodoncia',
-          content_category: 'Pricing'
-        });
-        precioObs.disconnect(); // solo disparar una vez
-      }
-    });
-  }, { threshold: 0.5 });
-  var precioSection = document.querySelector('.precio');
-  if (precioSection) precioObs.observe(precioSection);
-
-  // 3) LEAD — el usuario scrollea más del 75% de la página (alta intención)
-  var leadFired = false;
-  window.addEventListener('scroll', function(){
-    if (leadFired) return;
-    var scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
-    if (scrollPct > 0.75) {
-      fbq('track', 'Lead', {
-        content_name: 'Scroll 75%'
-      });
-      leadFired = true;
-    }
-  }, { passive: true });
-
-  // 4) SCHEDULE — clic en el botón sticky (intención fuerte de agendar)
-  var stickyBtn = document.getElementById('cta-sticky');
-  if (stickyBtn) {
-    stickyBtn.addEventListener('click', function(){
-      fbq('track', 'Schedule');
-    });
-  }
-
-})();
-</script>
 
 <!-- ====== SCRIPT DEL EDITOR (no aparece en la versión final descargada) ====== -->
 
