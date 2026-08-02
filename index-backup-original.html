@@ -3,24 +3,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#22352A">
-<title>Dra. Daniela Coronel — Ortodoncia Profesional en Santa Cruz</title>
-<meta name="description" content="Consultorio de ortodoncia en Santa Cruz de la Sierra. Evaluación personalizada, plan de tratamiento y seguimiento profesional. Solicita información.">
+<!-- ============================================================
+     ✏️  GUÍA RÁPIDA — reemplaza solo lo que diga "EDITAR:"
+     Busca la palabra EDITAR en este archivo. Todo lo demás
+     ya está listo.
 
-<!-- Favicon -->
+     1) ✅ WhatsApp configurado: 59176198029
+     2) ✅ Píxel de Meta configurado: 1100295705655365
+     3) ✅ Dominio configurado (GitHub Pages)
+     4) EDITAR: imagen para compartir → og-image.jpg (1200×630 px)
+     5) EDITAR: datos del consultorio (nombre, dirección, teléfono)
+     6) EDITAR: fotos reales y testimonio (marcados en el cuerpo)
+     ============================================================ -->
+
+<meta name="theme-color" content="#22352A">
+<title>Ortodoncia — Tu nueva sonrisa en 12 meses</title>
+<meta name="description" content="Tratamiento de ortodoncia completo con plan de pago accesible. Evaluación, preparación e instalación con seguimiento mensual.">
+
+<!-- Favicon (diente) sin archivo externo -->
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-<!-- Open Graph / redes sociales -->
+<!-- Open Graph / redes sociales (cómo se ve al compartir el link) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dra. Daniela Coronel — Ortodoncia Profesional">
-<meta property="og:description" content="Consultorio de ortodoncia en Santa Cruz de la Sierra. Evaluación personalizada y seguimiento profesional. Solicita información.">
+<meta property="og:title" content="Tu nueva sonrisa en 12 meses">
+<meta property="og:description" content="Tratamiento de ortodoncia completo con plan de pago que sí puedes cumplir. Agenda tu evaluación por WhatsApp.">
+<!-- EDITAR: dominio real + imagen 1200×630px -->
 <meta property="og:url" content="https://alvarezmasayjorge-cmyk.github.io/Landingpage_DanielaCoronel">
 <meta property="og:image" content="https://alvarezmasayjorge-cmyk.github.io/Landingpage_DanielaCoronel/og-image.jpg">
 <meta property="og:locale" content="es_BO">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- ============================================================
-     PÍXEL DE META — ID: 1100295705655365
+     PÍXEL DE META — ✅ CONFIGURADO (ID: 1100295705655365)
      ============================================================ -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -42,13 +56,13 @@ fbq('track', 'PageView');
 
 <style>
 :root{
-  --ink:#22352A;
-  --ink-soft:#5C6E60;
-  --aqua:#ECF1E9;
+  --ink:#22352A;        /* verde pino profundo: color de marca (Dra. Daniela Coronel) */
+  --ink-soft:#5C6E60;   /* verde salvia apagado: textos de apoyo */
+  --aqua:#ECF1E9;       /* verde salvia muy suave: fondos claros */
   --paper:#FFFFFF;
-  --sage:#6F8A6E;
-  --ivory:#F4F0E4;
-  --wa:#1FAF57;
+  --sage:#6F8A6E;       /* verde salvia de marca: acentos */
+  --ivory:#F4F0E4;      /* marfil del logo: resaltados cálidos */
+  --wa:#1FAF57;         /* verde WhatsApp para CTAs */
   --wa-dark:#178A44;
   --radius:18px;
 }
@@ -60,7 +74,7 @@ body{
   background:var(--paper);
   line-height:1.55;
   font-size:17px;
-  padding-bottom:84px;
+  padding-bottom:84px; /* espacio para el botón fijo */
 }
 h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.12}
 img{max-width:100%;display:block}
@@ -90,7 +104,7 @@ img{max-width:100%;display:block}
   background:var(--wa);color:#fff;text-decoration:none;
   font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;
   padding:16px 28px;border-radius:999px;margin-top:26px;
-  box-shadow:0 4px 12px rgba(31,175,87,.25);
+  box-shadow:0 6px 18px rgba(31,175,87,.35);
   transition:transform .15s ease,background .15s ease;
 }
 .cta:hover{background:var(--wa-dark);transform:translateY(-2px)}
@@ -137,52 +151,36 @@ img{max-width:100%;display:block}
 .precio-card .incluye{font-size:14px;color:var(--ink-soft);margin-top:16px}
 .precio .aviso{font-size:14px;color:#BCCBB4;max-width:420px;margin:20px auto 0}
 
-/* ---------- DISCLAIMER CARD ---------- */
-.disclaimer-card{
-  max-width:400px;margin:20px auto 0;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.2);
-  border-radius:var(--radius);padding:16px 20px;
-  font-size:13px;color:#BCCBB4;line-height:1.5;
+/* ---------- CASOS ---------- */
+.casos{padding:52px 0}
+.casos h2{font-size:clamp(24px,5.5vw,32px);font-weight:700;text-align:center;margin-bottom:28px}
+.caso-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto}
+.caso{
+  position:relative;aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;
+  background:linear-gradient(160deg,#ECF1E9,#D6E3CE);
 }
-.disclaimer-card svg{width:16px;height:16px;flex:none;margin-right:6px;vertical-align:middle;opacity:.7}
-
-/* ---------- EXPERIENCIAS ---------- */
-.experiencias{padding:52px 0}
-.experiencias h2{font-size:clamp(24px,5.5vw,32px);font-weight:700;text-align:center;margin-bottom:8px}
-.experiencias .lead{text-align:center;color:var(--ink-soft);max-width:460px;margin:0 auto 28px}
+.caso img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.caso .badge{
+  position:absolute;top:10px;left:10px;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:.04em;text-transform:uppercase;
+  padding:5px 12px;border-radius:999px;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.caso .badge-antes{
+  background:rgba(34,53,42,.75);color:#fff;
+}
+.caso .badge-despues{
+  background:rgba(31,175,87,.85);color:#fff;
+}
 .testimonio{
-  max-width:520px;margin:0 auto 16px;background:var(--aqua);
+  max-width:520px;margin:28px auto 0;background:var(--aqua);
   border-radius:var(--radius);padding:22px;
 }
 .testimonio p{font-size:16px;font-style:italic}
 .testimonio .autor{font-size:14px;font-weight:700;font-style:normal;margin-top:10px;color:var(--ink-soft)}
-.experiencias .disclaimer{
-  text-align:center;font-size:13px;color:var(--ink-soft);
-  max-width:420px;margin:20px auto 0;line-height:1.5;
-  padding:12px 16px;background:var(--aqua);border-radius:12px;
-}
-
-/* ---------- SOBRE LA DOCTORA ---------- */
-.sobre{padding:52px 0;background:var(--aqua)}
-.sobre h2{font-size:clamp(24px,5.5vw,32px);font-weight:700;text-align:center;margin-bottom:24px}
-.sobre-content{
-  display:flex;flex-direction:column;align-items:center;
-  gap:20px;max-width:520px;margin:0 auto;text-align:center;
-}
-.sobre-photo{
-  width:180px;height:180px;border-radius:50%;object-fit:cover;
-  box-shadow:0 6px 24px rgba(34,53,42,.12);
-  border:4px solid var(--paper);
-}
-.sobre-content p{color:var(--ink-soft);font-size:16px}
-.sobre-content .credential{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:14px;font-weight:700;color:var(--ink);
-  background:var(--paper);padding:8px 16px;border-radius:999px;
-  margin-top:4px;
-}
-.sobre-content .credential svg{width:18px;height:18px;color:var(--sage)}
 
 /* ---------- CIERRE ---------- */
 .cierre{padding:20px 0 60px;text-align:center}
@@ -196,15 +194,10 @@ img{max-width:100%;display:block}
   border-top:1px solid #DDE6D6;padding:12px 16px;
   display:flex;justify-content:center;
 }
-.sticky-cta .cta{
-  margin-top:0;width:100%;max-width:420px;justify-content:center;
-  font-size:17px;padding:14px 20px;
-  box-shadow:0 3px 10px rgba(31,175,87,.2);
-}
+.sticky-cta .cta{margin-top:0;width:100%;max-width:420px;justify-content:center;font-size:17px;padding:14px 20px}
 
 footer{background:var(--aqua);padding:24px 0 110px;text-align:center;font-size:13px;color:var(--ink-soft);line-height:1.7}
 footer a{color:var(--ink-soft)}
-footer .legal{margin-top:8px;font-size:12px;line-height:1.6;max-width:480px;margin-left:auto;margin-right:auto}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:480px){
@@ -213,21 +206,24 @@ footer .legal{margin-top:8px;font-size:12px;line-height:1.6;max-width:480px;marg
   .eyebrow{font-size:11px;padding:5px 12px}
   .cta{font-size:16px;padding:14px 22px}
   .hero-photo{max-width:100%}
+  .caso-grid{gap:8px}
+  .caso .badge{font-size:10px;padding:4px 9px;top:6px;left:6px}
   .precio-linea .monto{font-size:22px}
   .testimonio{padding:16px}
   .testimonio p{font-size:15px}
   .paso{padding:14px;gap:12px}
   .paso .num{width:36px;height:36px;font-size:15px}
   .paso h3{font-size:16px}
-  .sobre-photo{width:140px;height:140px}
 }
 
 @media (max-width:340px){
   .wrap{padding:0 14px}
+  .caso-grid{grid-template-columns:1fr;max-width:280px}
   .hero h1{font-size:24px}
   .cta{font-size:15px;padding:12px 18px;gap:8px}
 }
 
+/* Touch-friendly: min tap target size */
 @media (pointer:coarse){
   .cta{min-height:48px}
   .trust span{min-height:44px}
@@ -239,47 +235,58 @@ footer .legal{margin-top:8px;font-size:12px;line-height:1.6;max-width:480px;marg
 }
 a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 </style>
-</head>
+
+<!-- ====== EDITOR (solo en esta versión editable; no sale en la versión final) ====== -->
+
+<style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
+</style></head>
 <body>
+
+<!-- ====== BARRA DEL EDITOR (no aparece en la versión final descargada) ====== -->
+
+
 
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">Consultorio odontológico · Santa Cruz, Bolivia</span>
-    <h1>Ortodoncia profesional<br><span class="smile-word">paso a paso<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 4 Q100 24 196 4" fill="none" stroke="#6F8A6E" stroke-width="6" stroke-linecap="round"></path></svg></span></h1>
-    <p class="sub">Evaluación personalizada, plan de&nbsp;tratamiento adaptado a&nbsp;cada paciente y seguimiento profesional en&nbsp;cada etapa.</p>
+    <span class="eyebrow">promo por tiempo limitado - cupos reducidos</span>
+    <h1>La <span class="smile-word">sonrisa<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 4 Q100 24 196 4" fill="none" stroke="#6F8A6E" stroke-width="6" stroke-linecap="round"></path></svg></span> que quieres,<br>paso a paso</h1>
+    <p class="sub">Tratamiento de&nbsp;ortodoncia personalizado con seguimiento profesional en&nbsp;cada etapa para lograr una sonrisa funcional, saludable y&nbsp;armónica.</p>
 
     <!-- Foto principal de la Dra. Daniela Coronel -->
-    <img class="hero-photo" src="Ortodoncia Daniel /Doctora.webp" alt="Dra. Daniela Coronel — Especialista en Ortodoncia" width="440" height="440">
+    <img class="hero-photo" src="Ortodoncia Daniel /Doctora.webp" alt="Dra. Daniela Coronel — Especialista en Ortodoncia">
 
-    <!-- WhatsApp: 59176198029 -->
-    <a class="cta" id="cta-hero" href="https://wa.me/59176198029?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20tratamiento%20de%20ortodoncia." target="_blank" rel="noopener">
+    <!-- WhatsApp configurado: 59176198029 (591 = Bolivia · 76198029) -->
+    <a class="cta" id="cta-hero" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"></path></svg>
-      Solicitar información
+      Agendar mi evaluación
     </a>
     <p class="note">Respuesta por WhatsApp en&nbsp;horario de&nbsp;atención</p>
 
+    <!-- Señales de confianza. EDITAR el texto según tu caso -->
     <div class="trust">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Especialista&nbsp;certificada</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Tecnología&nbsp;moderna</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Atención&nbsp;personalizada</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Seguimiento&nbsp;continuo</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SOBRE LA DOCTORA ================= -->
-<section class="sobre">
-  <div class="wrap">
-    <h2>Conoce a tu ortodoncista</h2>
-    <div class="sobre-content">
-      <img class="sobre-photo" src="Ortodoncia Daniel /Doctora.webp" alt="Dra. Daniela Coronel" width="180" height="180">
-      <div>
-        <p>La <strong>Dra. Daniela Coronel</strong> es odontóloga especialista en ortodoncia, dedicada a ofrecer tratamientos seguros y personalizados en su consultorio de Santa Cruz de la Sierra.</p>
-        <div class="credential">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
-          Odontóloga colegiada — Santa Cruz, Bolivia
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -287,39 +294,27 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 <!-- ================= PROCESO ================= -->
 <section class="proceso">
   <div class="wrap">
-    <h2>Proceso de atención</h2>
-    <p class="lead">Cada tratamiento sigue un proceso profesional estructurado, adaptado a las necesidades de cada paciente.</p>
+    <h2>¿QUÉ INCLUYE TU TRATAMIENTO?</h2>
+
 
     <div class="paso">
       <div class="num">1</div>
-      <div>
-        <h3>Evaluación inicial</h3>
-        <p>Diagnóstico completo para conocer tu caso y determinar las opciones de tratamiento adecuadas.</p>
-      </div>
+      <div><h3>Diagnóstico completo</h3></div>
     </div>
 
     <div class="paso destacado">
       <div class="num">2</div>
-      <div>
-        <h3>Plan de&nbsp;tratamiento personalizado</h3>
-        <p>Se diseña un plan específico según tus necesidades, con tiempos estimados y costos claros.</p>
-      </div>
+      <div><h3>Plan de&nbsp;tratamiento personalizado</h3></div>
     </div>
 
     <div class="paso">
       <div class="num">3</div>
-      <div>
-        <h3>Controles periódicos</h3>
-        <p>Seguimiento profesional en cada etapa para monitorear el avance del tratamiento.</p>
-      </div>
+      <div><h3>Controles periódicos</h3></div>
     </div>
 
     <div class="paso">
       <div class="num">4</div>
-      <div>
-        <h3>Acompañamiento durante todo el&nbsp;proceso</h3>
-        <p>Comunicación directa con la doctora para resolver dudas en cualquier momento.</p>
-      </div>
+      <div><h3>Acompañamiento durante todo el&nbsp;proceso</h3></div>
     </div>
   </div>
 </section>
@@ -327,52 +322,72 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 <!-- ================= PRECIO ================= -->
 <section class="precio">
   <div class="wrap">
-    <h2>Información de&nbsp;costos</h2>
+    <h2>Un plan de&nbsp;pago pensado para&nbsp;ti</h2>
     <div class="precio-card">
       <div class="precio-linea">
-        <span class="concepto">Cuota inicial desde</span>
-        <span class="monto">300 <span>Bs*</span></span>
+        <span class="concepto">cuota inicial</span>
+        <span class="monto">300 <span>Bs</span></span>
       </div>
       <div class="precio-linea">
         <span class="concepto">Cómodas cuotas mensuales</span>
         <span class="monto"></span>
       </div>
-      <p class="incluye">Tratamiento completo de&nbsp;12 a&nbsp;24&nbsp;meses</p>
+      <p class="incluye">Tratamiento completo de&nbsp;12 y&nbsp;24&nbsp;meses</p>
     </div>
-
-    <!-- Disclaimer visible requerido por Meta -->
-    <div class="disclaimer-card">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <strong style="color:#fff">*Precios referenciales.</strong> El costo final del tratamiento se determina tras la evaluación clínica presencial, según las necesidades específicas de cada paciente. Los precios están sujetos a cambios sin previo aviso.
-    </div>
+    <p class="aviso">La preparación previa de&nbsp;tu boca (si&nbsp;la necesitas) se&nbsp;cotiza en&nbsp;tu evaluación inicial, según tu&nbsp;caso.</p>
   </div>
 </section>
 
-<!-- ================= EXPERIENCIAS DE PACIENTES ================= -->
-<section class="experiencias">
+<!-- ================= CASOS ================= -->
+<section class="casos">
   <div class="wrap">
-    <h2>Experiencias de pacientes</h2>
-    <p class="lead">Lo que dicen quienes ya iniciaron su tratamiento de ortodoncia.</p>
-
-    <div class="testimonio">
-      <p>"Siempre me tapaba la&nbsp;boca para reír. Desde que empecé mi&nbsp;tratamiento con la&nbsp;Dra.&nbsp;Daniela me&nbsp;siento mucho más segura, ahora sonrío sin&nbsp;pensarlo dos&nbsp;veces."</p>
-      <p class="autor">— María G., paciente</p>
+    <h2>Sonrisas que ya se transformaron</h2>
+    <div class="caso-grid">
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 01.webp" alt="Antes del tratamiento — caso 1">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 01.webp" alt="Después del tratamiento — caso 1">
+        <span class="badge badge-despues">Después</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 02.webp" alt="Antes del tratamiento — caso 2">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 02.webp" alt="Después del tratamiento — caso 2">
+        <span class="badge badge-despues">Después</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 03.webp" alt="Antes del tratamiento — caso 3">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 03.webp" alt="Después del tratamiento — caso 3">
+        <span class="badge badge-despues">Después</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /Before 04.webp" alt="Antes del tratamiento — caso 4">
+        <span class="badge badge-antes">Antes</span>
+      </div>
+      <div class="caso">
+        <img src="Ortodoncia Daniel /After 04.webp" alt="Después del tratamiento — caso 4">
+        <span class="badge badge-despues">Después</span>
+      </div>
     </div>
-
     <div class="testimonio">
-      <p>"El proceso fue muy profesional desde la primera consulta. Me explicaron todo claramente y siempre me sentí acompañada en cada control."</p>
-      <p class="autor">— Laura R., paciente</p>
+      <p>"Siempre me tapaba la&nbsp;boca para reír porque me&nbsp;daba vergüenza que vean mis dientes chuecos. Desde que empecé mi&nbsp;tratamiento con la&nbsp;Dra.&nbsp;Daniela me&nbsp;siento otra persona, ahora sonrío sin&nbsp;pensarlo dos&nbsp;veces."</p>
+      <p class="autor">— María G.</p>
     </div>
-
-    <p class="disclaimer">Los testimonios reflejan experiencias individuales. Los resultados del tratamiento de ortodoncia varían según cada caso clínico y no constituyen una garantía de resultados.</p>
   </div>
 </section>
 
 <!-- ================= CIERRE ================= -->
 <section class="cierre">
   <div class="wrap">
-    <h2>¿Tienes dudas? Estamos para&nbsp;orientarte</h2>
-    <p>Escríbenos por WhatsApp y con gusto te brindamos la información que necesites sobre tu caso.</p>
+    <h2>Tu evaluación es el&nbsp;primer&nbsp;paso</h2>
+    <p>Escríbenos y&nbsp;agenda tu&nbsp;cita. En&nbsp;una sola visita sabrás todo sobre tu&nbsp;tratamiento.</p>
   </div>
 </section>
 
@@ -380,24 +395,25 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
   <strong>Dra. Daniela Coronel · Estética y Salud Dental</strong><br>
   Santa Cruz de la Sierra, Bolivia · WhatsApp 76198029<br>
   <a href="https://maps.google.com/?q=-17.826319,-63.176638" target="_blank" rel="noopener">Ver ubicación en el mapa</a> · <a href="politica-privacidad.html">Política de privacidad</a>
-  <p class="legal">Este sitio tiene fines informativos. No constituye consejo médico ni garantiza resultados. Cada tratamiento es personalizado y los resultados dependen de factores clínicos individuales.</p>
 </footer>
 
 <!-- ================= BOTÓN FIJO ================= -->
 <div class="sticky-cta">
-  <a class="cta" id="cta-sticky" href="https://wa.me/59176198029?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20tratamiento%20de%20ortodoncia." target="_blank" rel="noopener">
+  <!-- WhatsApp: mismo número que el botón de arriba -->
+  <a class="cta" id="cta-sticky" href="https://wa.me/59176198029?text=Hola%2C%20le%C3%AD%20sobre%20el%20tratamiento%20de%20ortodoncia%20de%2012%20meses%20y%20quiero%20agendar%20mi%20evaluaci%C3%B3n." target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.3Z"></path></svg>
-    Más información por WhatsApp
+    Agendar por WhatsApp
   </a>
 </div>
 
 <!-- ================= DATOS ESTRUCTURADOS (SEO local) ================= -->
+<!-- Dominio configurado: GitHub Pages -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dentist",
   "name": "Dra. Daniela Coronel — Estética y Salud Dental",
-  "description": "Consultorio de ortodoncia profesional en Santa Cruz de la Sierra, Bolivia. Evaluación personalizada y seguimiento continuo.",
+  "description": "Tratamiento de ortodoncia completo con plan de pago de 12 meses.",
   "url": "https://alvarezmasayjorge-cmyk.github.io/Landingpage_DanielaCoronel",
   "telephone": "+59176198029",
   "priceRange": "$$",
@@ -418,38 +434,42 @@ a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
 
 <script>
 // ===================== EVENTOS META PIXEL =====================
+// Estos eventos permiten a Meta optimizar tus campañas hacia
+// personas con mayor intención de conversión.
+
 document.addEventListener('DOMContentLoaded', function(){
+  // Esperar a que fbq esté disponible (el script se carga async)
   function waitForFbq(callback, attempts) {
     if (typeof fbq === 'function') { callback(); return; }
-    if (attempts > 20) return;
+    if (attempts > 20) return; // máximo ~10 segundos
     setTimeout(function(){ waitForFbq(callback, attempts + 1); }, 500);
   }
 
   waitForFbq(function(){
 
-    // CONTACT — clic en cualquier botón de WhatsApp
+    // 1) CONTACT — clic en cualquier botón de WhatsApp (hero o sticky)
     document.querySelectorAll('#cta-hero, #cta-sticky').forEach(function(btn){
       btn.addEventListener('click', function(){
         fbq('track', 'Contact');
       });
     });
 
-    // VIEWCONTENT — el usuario ve la sección de precios
+    // 2) VIEWCONTENT — el usuario ve la sección de precios (señal de interés)
     var precioObs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if (entry.isIntersecting) {
           fbq('track', 'ViewContent', {
-            content_name: 'Información de costos',
+            content_name: 'Precios Ortodoncia',
             content_category: 'Pricing'
           });
-          precioObs.disconnect();
+          precioObs.disconnect(); // solo disparar una vez
         }
       });
     }, { threshold: 0.5 });
     var precioSection = document.querySelector('.precio');
     if (precioSection) precioObs.observe(precioSection);
 
-    // LEAD — scroll 75%
+    // 3) LEAD — el usuario scrollea más del 75% de la página (alta intención)
     var leadFired = false;
     window.addEventListener('scroll', function(){
       if (leadFired) return;
@@ -462,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     }, { passive: true });
 
-    // SCHEDULE — clic en el botón sticky
+    // 4) SCHEDULE — clic en el botón sticky (intención fuerte de agendar)
     var stickyBtn = document.getElementById('cta-sticky');
     if (stickyBtn) {
       stickyBtn.addEventListener('click', function(){
@@ -473,5 +493,10 @@ document.addEventListener('DOMContentLoaded', function(){
   }, 0);
 });
 </script>
+
+<!-- ====== SCRIPT DEL EDITOR (no aparece en la versión final descargada) ====== -->
+
+
+
 
 </body></html>
